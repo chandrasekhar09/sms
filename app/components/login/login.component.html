@@ -4,7 +4,7 @@
     <div class="col-sm-12 col-md-8 col-lg-4 ">
       <div class="card shadow">
         <div class="card-body">
-          <app-login-form [formData]="formData" (loginData)="getLoginEvent($event)"></app-login-form>
+          <app-reactive-form [formData]="formData" (formSubmitEvent)="getLoginEvent($event)"></app-reactive-form>
         </div>
       </div>
     </div>

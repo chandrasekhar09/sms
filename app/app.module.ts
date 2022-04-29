@@ -15,10 +15,9 @@ import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MaterialModule } from './shared/modules/material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { LoginFormComponent } from './components/login/login-form/login-form.component';
+import { ReactiveFormComponent } from './shared-components/reactive-form/reactive-form.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormComponent } from './shared-components/reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +25,6 @@ import { ReactiveFormComponent } from './shared-components/reactive-form/reactiv
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
-    LoginFormComponent,
     ReactiveFormComponent,
   ],
   imports: [

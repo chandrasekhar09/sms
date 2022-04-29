@@ -1,1 +1,33 @@
-<p>reactive-form works!</p>
+<form [formGroup]="loginForm" (ngSubmit)="submit()">
+  <ng-container *ngFor="let row of formData.controls.rows">
+    <div class="row">
+      <ng-container *ngFor="let col of row">
+          <div class="form-group mb-3">
+            <label>{{ col.label }}</label>
+            <input [type]="col.inputType" [title]="col.label" [formControlName]="col.formControlName" class="form-control" [placeholder]="col.placeHolder" />
+            <span class="text-danger">
+              <ng-container *ngIf="(loginForm.controls[col.formControlName].errors?.required && loginForm.controls[col.formControlName]?.touched) || loginForm.controls[col.formControlName].errors?.isrequired"> {{ col.label }} required </ng-container>
+              <ng-container *ngIf="loginForm.controls[col.formControlName].errors?.email"> Invalid Email format </ng-container>
+			  <ng-container *ngIf="loginForm.controls[col.formControlName].errors?.minlength">Minimum {{col.validations.minLength}} characters required</ng-container>
+			  <ng-container *ngIf="loginForm.controls[col.formControlName].errors?.maxLength">Maximum {{col.validations.maxLength}} characters allowed</ng-container>
+            </span>
+          </div>
+      </ng-container>
+    </div>
+  </ng-container>
+  <div class="btn-group">
+	<button class="me-2" type="submit" mat-raised-button color="primary">{{formData.controls.submitButton}}</button>
+	<button type="reset" mat-stroked-button (click)="clearForm()">Clear</button>
+  </div>
+  <div class="row mt-2 d-flex">
+	<div class="col">
+			<a *ngIf="formData.controls.formType=='login'" routerLink="/register">Register account</a>
+			<a *ngIf="formData.controls.formType=='register'" routerLink="/login"> I have account</a>
+	  </div>
+	  <div class="col"></div>
+	  <div class="col">
+		  <a *ngIf="formData.controls.formType=='login'" routerLink="/forget-password">forget password?</a>
+	  </div>
+  </div>
+
+</form>
