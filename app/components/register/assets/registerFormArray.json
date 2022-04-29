@@ -16,7 +16,7 @@
       ],
       [
         {
-          "label": "Create new password",
+          "label": "Create password",
           "value": "",
           "placeHolder": "Create password",
           "formControlName": "password",
