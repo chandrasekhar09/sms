@@ -22,7 +22,8 @@
           "formControlName": "password",
           "inputType": "text",
           "validations": {
-            "required": true
+            "required": true,
+			"minLength":6
           }
         }
       ]
