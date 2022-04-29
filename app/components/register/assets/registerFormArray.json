@@ -1,0 +1,35 @@
+{
+  "controls": {
+    "rows": [
+      [
+        {
+          "label": "Email",
+          "value": "",
+          "placeHolder": "Enter Email",
+          "formControlName": "email",
+          "inputType": "email",
+          "validations": {
+            "required": true,
+            "email": true
+          }
+        }
+      ],
+      [
+        {
+          "label": "Create new password",
+          "value": "",
+          "placeHolder": "Create password",
+          "formControlName": "password",
+          "inputType": "text",
+          "validations": {
+            "required": true
+          }
+        }
+      ]
+
+    ],
+	"formType":"register",
+	"submitButton":"Register"
+
+  }
+}

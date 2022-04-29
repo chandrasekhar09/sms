@@ -1,0 +1,34 @@
+{
+  "controls": {
+    "rows": [
+      [
+        {
+          "label": "Email",
+          "value": "",
+          "placeHolder": "Enter Email",
+          "formControlName": "email",
+          "inputType": "email",
+          "validations": {
+            "required": true,
+            "email": true
+          }
+        }
+      ],
+      [
+        {
+          "label": "Password",
+          "value": "",
+          "placeHolder": "Enter Password",
+          "formControlName": "password",
+          "inputType": "password",
+          "validations": {
+            "required": true,
+			"minLength":6
+          }
+        }
+      ]
+    ],
+	"formType":"login",
+	"submitButton":"Login"
+  }
+}
